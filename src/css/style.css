@@ -110,6 +110,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: var(--primary-color);
+}
+
 .divider {
   border-bottom: 2px solid var(--primary-color);
 }
@@ -239,6 +243,17 @@ button {
 .cart-card__price {
   grid-row: 2;
   grid-column: 3;
+}
+
+/* Cart message*/
+.add-to-cart-message {
+  color: #fff;
+  background-color: #4caf50; /* Um tom de verde para indicar sucesso */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 500px) {
