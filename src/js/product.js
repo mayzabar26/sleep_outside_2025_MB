@@ -1,7 +1,11 @@
-import { setLocalStorage } from './utils.mjs';
+import { getParam, setLocalStorage } from './utils.mjs'//;
 import ProductData from './ProductData.mjs';
 
 const dataSource = new ProductData('tents');
+
+//Get product ID
+const productId = getParam('product');
+//console.log(dataSource.findProductById(productId));
 
 function addProductToCart(product) {
   setLocalStorage('so-cart', product);
