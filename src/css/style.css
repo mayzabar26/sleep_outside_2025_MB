@@ -256,6 +256,42 @@ button:hover {
   font-weight: bold;
 }
 
+/* start product-grid css */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  padding: 1em;
+  list-style-type: none;
+  text-align: center;
+}
+
+.product-grid li a {
+  text-decoration: none;
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-grid img {
+  width: 100px;
+  height: 100px;
+}
+
+.product-grid h3 {
+  margin-top: 0.5em;
+  font-size: var(--font-base);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;

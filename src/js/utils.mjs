@@ -54,9 +54,9 @@ export function renderWithTemplate(template, parentElement, data, callback) {
   }
 }
 
-export async function loadHeaderFooter() {
-  const headerTemplate = await loadTemplate('../partials/header.html');
-  const footerTemplate = await loadTemplate('../partials/footer.html');
+export async function loadHeaderFooter(path) {
+  const headerTemplate = await loadTemplate(`${path}header.html`);
+  const footerTemplate = await loadTemplate(`${path}footer.html`);
 
   //Getting main-header and main-footer from the header.html and footer.html
   const headerElement = document.getElementById('main-header');
