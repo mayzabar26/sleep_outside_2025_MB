@@ -1,3 +1,5 @@
 import { loadHeaderFooter } from './utils.mjs';
 
-loadHeaderFooter('./partials/');
+document.addEventListener('DOMContentLoaded', () => {
+    loadHeaderFooter('../partials/');
+});

@@ -2,6 +2,7 @@ import ProductData from './ProductData.mjs';
 import ProductList from './ProductList.mjs';
 import { loadHeaderFooter, getParam } from './utils.mjs';
 
+/*loadHeaderFooter('../partials/');*/
 loadHeaderFooter('../partials/');
 
 const category = getParam('category');
