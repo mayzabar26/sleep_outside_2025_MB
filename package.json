@@ -4,13 +4,14 @@
   "description": "Boilerplate for WDD 330 SleepOutside project",
   "main": "main.js",
   "scripts": {
-    "start": "vite",
-    "build": "vite build --emptyOutDir",
-    "lint": "eslint *.js src/**/*.js",
-    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
-    "test": "jest",
-    "preview": "vite preview"
-  },
+  "start": "vite",
+  "build": "vite build --emptyOutDir && npm run copy-public",
+  "copy-public": "xcopy src\\public dist\\public /E /I /Y", 
+  "lint": "eslint *.js src/**/*.js",
+  "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
+  "test": "jest",
+  "preview": "vite preview"
+},
   "author": "Shane Thompson",
   "license": "ISC",
   "devDependencies": {
