@@ -12,3 +12,4 @@ const myList = new ProductList(category, dataSource, listElement);
 myList.init();
 const heading = document.querySelector('h2');
 heading.innerHTML = `Top Products: ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+
