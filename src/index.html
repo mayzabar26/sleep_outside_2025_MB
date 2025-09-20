@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Home</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -13,14 +13,15 @@
     <main class="divider">
       <div class="hero">
         <img
-          src="/images/banner-sm.jpg"
-          srcset="images/banner-sm.jpg 500w, images/banner.jpg"
-          alt="image of a high mountain lake"
-        />
+          src="public/images/banner-sm.jpg"
+          srcset="public/images/banner-sm.jpg 500w, public/images/banner.jpg"
+          alt="image of a high mountain lake" />
+        
         <div class="logo logo--square">
-          <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
+          <img src="public/images/noun_Tent_2517.svg" alt="tent image for logo" />
           <div>Sleep<span class="highlight">Outside</span></div>
         </div>
+
         <div class="mission">
           <p>
             Our mission is to provide you with everything you need to sleep
@@ -30,8 +31,35 @@
       </div>
 
       <section class="products">
-        <h2>Top Products</h2>
-        <ul class="product-list">
+        <h2>Shop Our Outdoor Collection</h2>
+        <ul class="product-grid">
+          <li>
+            <a href="product_listing/index.html?category=tents">
+              <img src="public/images/tents.svg" alt="Tents Icon" />
+              <h3>Tents</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="product_listing/index.html?category=sleeping-bags">
+              <img src="public/images/sleepingbags.svg" alt="Sleeping Bags Icon" />
+              <h3>Sleeping Bags</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="product_listing/index.html?category=backpacks">
+              <img src="public/images/backpacks.svg" alt="Backpacks Icon" />
+              <h3>Backpacks</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="product_listing/index.html?category=hammocks">
+              <img src="public/images/hammocks.svg" alt="Hammocks Icon" />
+              <h3>Hammocks</h3>
+            </a>
+          </li>
         </ul>
       </section>
     </main>
