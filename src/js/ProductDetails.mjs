@@ -43,10 +43,12 @@ export default class ProductDetails {
 
   addProductToCart(product) {
     let cart = getLocalStorage('so-cart');
+    console.log(typeof(cart), cart)
     if (!cart) {
       cart = [];
+    } else{
+      cart.push(product);
     }
-    cart.push(product);
     setLocalStorage('so-cart', cart);
   }
 

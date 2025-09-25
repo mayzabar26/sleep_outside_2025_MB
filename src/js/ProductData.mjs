@@ -2,6 +2,7 @@ const baseURL = import.meta.env.VITE_SERVER_URL;
 
 function convertToJson(res) {
   if (res.ok) {
+    console.log(res)
     return res.json();
   } else {
     throw new Error("Bad Response");
