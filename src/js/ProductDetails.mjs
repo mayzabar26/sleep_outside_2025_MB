@@ -41,7 +41,7 @@ export default class ProductDetails {
       .addEventListener('click', this.addToCartHandler.bind(this));
   }
 
-  addProductToCart(product) {
+  /*addProductToCart(product) {
     let cart = getLocalStorage('so-cart');
     console.log(typeof(cart), cart)
     if (!cart) {
@@ -49,6 +49,20 @@ export default class ProductDetails {
     } else{
       cart.push(product);
     }
+    setLocalStorage('so-cart', cart);
+  }*/
+
+  addProductToCart(product) {
+    let cart = getLocalStorage('so-cart');
+    console.log(typeof(cart), cart)
+    if (!cart) {
+      cart = [];
+    } 
+    product.FinalPrice = parseFloat(product.FinalPrice);
+
+    product.Quantity = 1;
+    cart.push(product);
+
     setLocalStorage('so-cart', cart);
   }
 
