@@ -17,6 +17,83 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        
+        <div class="checkout-content">
+          <form class="checkout-form" name="checkout" id="checkout-form">
+            <h3>Customer Information</h3>
+            
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required>
+            </div>
+
+            <h3>Shipping & Billing Address</h3>
+            <div class="form-group">
+              <label for="staddress">Street Address</label>
+              <input type="text" id="staddress" name="street" required>
+            </div>
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" required>
+            </div>
+
+            <div class="form-group">
+              <label for="zip">Zip Code</label>
+              <input type="text" id="zip" name="zip" required pattern="[0-9]{5,}" title="Zip Code must be at least 5 digits">
+            </div>
+
+            <h3>Payment Details</h3>
+            <div class="form-group">
+              <label for="cardnum">Credit Card Number</label>
+              <input type="text" id="cardnum" name="cardNumber" required pattern="\d{16}" title="Credit Card number must be 16 digits">
+            </div>
+
+            <div class="form-group">
+              <label for="expiration">Expiration Date (MM/YY)</label>
+              <input type="text" id="expiration" name="expiration" required pattern="\d{2}\/\d{2}" title="Format: MM/YY">
+            </div>
+            
+            <div class="form-group">
+              <label for="securitycode">Security Code</label>
+              <input type="text" id="securitycode" name="code" required pattern="\d{3,4}" title="CVV must be 3 or 4 digits">
+            </div>
+
+            <div class="form-group">
+              <label for="securitycode">Security Code</label>
+              <input type="text" id="securitycode" name="securitycode" required pattern="\d{3,4}" title="CVV must be 3 or 4 digits">
+            </div>
+
+            <button type="submit" id="checkoutSubmit" class="checkout-button">Place Order</button>
+          </form>
+
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <dl class="order-summary-list">
+              <dt>Item Subtotal:</dt>
+              <dd id="subtotal">$0.00</dd>
+              
+              <dt>Tax (6%):</dt>
+              <dd id="tax">$0.00</dd>
+
+              <dt>Shipping Estimate:</dt>
+              <dd id="shipping">$0.00</dd>
+
+              <dt class="order-total-label">Order Total:</dt>
+              <dd id="orderTotal" class="order-total-value">$0.00</dd>
+            </dl>
+          </div>
+        </div>
       </section>
     </main>
 
