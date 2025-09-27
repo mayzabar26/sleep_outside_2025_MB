@@ -1,16 +1,19 @@
 import { loadHeaderFooter, qs } from "./utils.mjs";
 import CheckoutProcess from "./CheckoutProcess.mjs";
-import CheckoutProcess from "./CheckoutProcess.mjs";
+import ExternalServices from "./ExternalServices.mjs";
 
-/*loadHeaderFooter();*/
 loadHeaderFooter('../partials/');
 
+//Start external service
+const externalServices = new ExternalServices();
+
 //Start checkout process
-const checkoutProcess = new CheckoutProcess('.order-summary');
+const checkoutProcess = new CheckoutProcess('.order-summary', externalServices);
 checkoutProcess.init();
 
-//FUTURE EVENT LISTENER TO SUBMIT FORM
-//qs('#checkout-form').addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     //shipping logic will be here
-// });
+//Adding event listener to submit form
+const checkoutForm = qs('#checkout-form');
+checkoutForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    await checkoutProcess.checkout(checkoutForm);
+});

@@ -65,3 +65,14 @@ export async function loadHeaderFooter(path) {
   renderWithTemplate(headerTemplate, headerElement);
   renderWithTemplate(footerTemplate, footerElement);
 }
+
+//Week 04 assignment
+export function formDataToJSON(formElement) {
+    const formData = new FormData(formElement),
+    convertedJSON = {};
+
+    formData.forEach(function (value, key) {
+        convertedJSON[key] = value;
+    });
+    return convertedJSON;
+}
