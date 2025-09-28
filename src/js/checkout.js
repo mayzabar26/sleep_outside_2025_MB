@@ -15,5 +15,12 @@ checkoutProcess.init();
 const checkoutForm = qs('#checkout-form');
 checkoutForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    await checkoutProcess.checkout(checkoutForm);
+
+    //Week 4 assignment starts here
+    const chk_status = checkoutForm.checkValidity();
+    checkoutForm.reportValidity();
+
+    if(chk_status) {
+        await checkoutProcess.checkout(checkoutForm);
+    }
 });
