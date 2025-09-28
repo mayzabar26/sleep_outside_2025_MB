@@ -90,7 +90,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {background-color: var(--primary-color);}
+button:hover {background-color: var(--tertiary-color);}
 
 .divider {border-bottom: 2px solid var(--primary-color);}
 /* End utility classes */
@@ -423,8 +423,28 @@ footer {
     grid-column: 2;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--color-accent); /* Destaque com a cor principal */
+    color: var(--color-accent); 
     border-top: 2px solid var(--color-medium-gray);
     padding-top: 1rem;
     margin-top: 0.5rem;
+}
+
+/*Success page style*/
+.success-message {
+  margin: 1.5rem;
+}
+
+.success-button {
+    background-color: var(--secondary-color);
+    color: white !important; 
+    width: auto; 
+    display: inline-block; 
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.success-button:hover {
+    background-color: var(--tertiary-color);
+    color: white !important;
 }
