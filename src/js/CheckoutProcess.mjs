@@ -1,4 +1,4 @@
-import { getLocalStorage, qs, formDataToJSON } from "./utils.mjs";
+import { getLocalStorage, qs, formDataToJSON, setLocalStorage } from "./utils.mjs";
 import ExternalServices from './ExternalServices.mjs';
 
 //Variables for the calculations
@@ -77,10 +77,21 @@ export default class CheckoutProcess {
         try {
             const response = await this.externalServices.checkout(orderPayload);
             console.log('Request submitted successfully:', response);
-            //NEXT ACTIVITY: HANDLE SUCCESS/FAIL HERE
+
+            //Week 04 assignment starts here
+            setLocalStorage(CART_KEY, []);
+            window.location.assign('/checkout/success.html');
+            //ends here
+
             return response;
         } catch (error) {
             console.error('Checkout Error:', error);
+            const errorMessage = error.message.message || 'An unknown error has occurred.';
+            console.log('SERVER ERROR MESSAGE:', errorMessage);
+            
+            if (error.name === 'servicesError' && error.message && error.message.message) {
+                console.log('Detailed server error:', error.message.message);
+            }
             throw error;
         }
     }
